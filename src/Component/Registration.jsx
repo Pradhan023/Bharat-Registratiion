@@ -16,7 +16,7 @@ const Registration = () => {
     const stateClick = async(e)=>{
         e.preventDefault();
         try{
-          const Api = await axios.post("https://bharatregistration-api.onrender.com/bharat/register",{data:state});
+          const Api = await axios.post("https://bharatregistration-api.onrender.com/bharat/register",state);
           const data = Api.data;
           console.log(data);
           if(data.msg == "User is successfully Registered"){
